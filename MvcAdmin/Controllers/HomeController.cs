@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using DataAccessLayer;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace MvcAdmin.Controllers
@@ -10,6 +8,8 @@ namespace MvcAdmin.Controllers
     {
         public ActionResult Index()
         {
+            var ctx = DemoContext.Create();
+            var test = ctx.Posts.ToList();
             return View();
         }
 

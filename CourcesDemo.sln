@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic.Implementatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer\DataAccessLayer.csproj", "{C41D65E7-2AE4-4CDF-913C-0623E925B89A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer.Objects", "DataAccessLayer\DataAccessLayer.Objects\DataAccessLayer.Objects.csproj", "{CBE01C7B-60B4-4309-A427-623F594CAA26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{C41D65E7-2AE4-4CDF-913C-0623E925B89A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C41D65E7-2AE4-4CDF-913C-0623E925B89A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C41D65E7-2AE4-4CDF-913C-0623E925B89A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBE01C7B-60B4-4309-A427-623F594CAA26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE01C7B-60B4-4309-A427-623F594CAA26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE01C7B-60B4-4309-A427-623F594CAA26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE01C7B-60B4-4309-A427-623F594CAA26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,5 +51,6 @@ Global
 		{C96503BF-8658-4A63-BD67-A934498B68A8} = {F544F3A6-5D86-4A47-88F7-6E619417B39F}
 		{8EA8D4D2-1E55-4BD2-9467-CFF8A7276E8F} = {F544F3A6-5D86-4A47-88F7-6E619417B39F}
 		{C41D65E7-2AE4-4CDF-913C-0623E925B89A} = {8E8E6CE0-59CA-4F2B-86F4-502F80097598}
+		{CBE01C7B-60B4-4309-A427-623F594CAA26} = {8E8E6CE0-59CA-4F2B-86F4-502F80097598}
 	EndGlobalSection
 EndGlobal
