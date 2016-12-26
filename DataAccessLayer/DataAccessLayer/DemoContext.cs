@@ -18,8 +18,8 @@ namespace DataAccessLayer
             Database.SetInitializer<DemoContext>(new DropCreateDatabaseAlways<DemoContext>());
         }
 
-        public DbSet<Post> Posts { get; set; }
+        public virtual DbSet<Post> Posts { get; set; }
 
-        public DbSet<File> Files { get; set; }
+        public virtual DbSet<File> Files { get; set; }
     }
 }

@@ -1,13 +1,15 @@
-﻿namespace BusinessLogic.Abstraction
+﻿using BusinessLogic.Objects;
+
+namespace BusinessLogic.Abstraction
 {
     /// <summary>
     /// Manager to work with news
     /// </summary>
-    public interface INewsManager
+    public interface IPostManager
     {
         /// <summary>
         /// Add news
         /// </summary>
-        void AddNews();
+        void AddPost(AddPostDto dto);
     }
 }

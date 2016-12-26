@@ -1,15 +1,25 @@
-﻿using DataAccessLayer;
-using System.Linq;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using BusinessLogic.Abstraction;
+using BusinessLogic.Objects;
 
 namespace MvcAdmin.Controllers
 {
     public class HomeController : Controller
     {
+        private IPostManager _postManager;
+        public HomeController(IPostManager postManager)
+        {
+            _postManager = postManager;
+        }
+
         public ActionResult Index()
         {
-            var ctx = DemoContext.Create();
-            var test = ctx.Posts.ToList();
+            _postManager.AddPost(new AddPostDto
+            {
+                Title = "Новый пост",
+                Description = "Описание поста"
+            });
+
             return View();
         }
 
