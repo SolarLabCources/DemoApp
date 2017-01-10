@@ -1,0 +1,72 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using BusinessLogic.Abstraction;
+using BusinessLogic.Implementation;
+using BusinessLogic.Objects;
+using MvcAdmin.Models;
+
+namespace MvcAdmin.Controllers
+{
+    [Authorize]
+    public class PostController : Controller
+    {
+        private IPostManager _postManager;
+
+        public PostController(IPostManager postManager)
+        {
+            Infrastructure.AutoMapperConfig.Initialize();
+            _postManager = postManager;
+        }
+
+        // GET: Item
+        public ActionResult Index()
+        {
+            var posts = _postManager.GetPosts();
+            var postVms = AutoMapper.Mapper.Map<IEnumerable<PostViewModel>>(posts);
+            return View(postVms);
+        }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(PostViewModel post)
+        {
+            if (ModelState.IsValid)
+            {
+                var postDto = AutoMapper.Mapper.Map<AddPostDto>(post);
+                _postManager.AddPost(postDto);
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+                var postForEdit = _postManager.GetPosts().FirstOrDefault(p => p.Id == id);
+                var postVm = AutoMapper.Mapper.Map<PostViewModel>(postForEdit);
+                return View(postVm);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(PostViewModel post)
+        {
+            if (ModelState.IsValid)
+            {
+                var postDto = AutoMapper.Mapper.Map<AddPostDto>(post);
+                _postManager.EditPost(postDto);
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+    }
+}

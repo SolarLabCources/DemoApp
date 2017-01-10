@@ -7,6 +7,7 @@ using BusinessLogic.Objects;
 using DataAccessLayer;
 using DataAccessLayer.Objects;
 using Moq;
+using MvcAdmin.Infrastructure;
 using NUnit.Framework;
 
 namespace Tests
@@ -31,7 +32,7 @@ namespace Tests
             //Arrange
             Mock<DbSet<Post>> dbSetMock = new Mock<DbSet<Post>>();
             _contextMoq.Setup(x => x.Posts).Returns(dbSetMock.Object);
-            var dto = new AddPostDto {Title = "test"};
+            var dto = new PostDto {Title = "test"};
 
             //Act
             _manager.AddPost(dto);

@@ -1,0 +1,10 @@
+﻿@model MvcAdmin.Models.PostViewModel
+
+@{
+    ViewBag.Title = "Create";
+    ViewBag.Action = "Create";
+}
+
+<h2>@ViewBag.Action</h2>
+
+@Html.Partial("_Post", Model)

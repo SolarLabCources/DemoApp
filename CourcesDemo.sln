@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcAdmin", "MvcAdmin\MvcAdmin.csproj", "{BF7A6F6A-3589-402D-AFA9-44C5FBA4053A}"
 EndProject
@@ -20,6 +20,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic.Objects", "BusinessLogic\BusinessLogic.Objects\BusinessLogic.Objects.csproj", "{52D70407-5FEE-4352-8479-04B10767B6F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{71C13B5A-2B87-4DD2-A5A1-BD0F744833D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{AB0E7AE1-7BF5-432C-8F15-D83788960D71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions", "Extensions\Extensions.csproj", "{516B8CBB-D6F6-4D9C-A3A8-CE5972012BBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +59,10 @@ Global
 		{71C13B5A-2B87-4DD2-A5A1-BD0F744833D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71C13B5A-2B87-4DD2-A5A1-BD0F744833D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71C13B5A-2B87-4DD2-A5A1-BD0F744833D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{516B8CBB-D6F6-4D9C-A3A8-CE5972012BBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{516B8CBB-D6F6-4D9C-A3A8-CE5972012BBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{516B8CBB-D6F6-4D9C-A3A8-CE5972012BBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{516B8CBB-D6F6-4D9C-A3A8-CE5972012BBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,5 +73,6 @@ Global
 		{C41D65E7-2AE4-4CDF-913C-0623E925B89A} = {8E8E6CE0-59CA-4F2B-86F4-502F80097598}
 		{CBE01C7B-60B4-4309-A427-623F594CAA26} = {8E8E6CE0-59CA-4F2B-86F4-502F80097598}
 		{52D70407-5FEE-4352-8479-04B10767B6F9} = {F544F3A6-5D86-4A47-88F7-6E619417B39F}
+		{516B8CBB-D6F6-4D9C-A3A8-CE5972012BBF} = {AB0E7AE1-7BF5-432C-8F15-D83788960D71}
 	EndGlobalSection
 EndGlobal

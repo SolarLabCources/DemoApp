@@ -15,7 +15,7 @@ namespace DataAccessLayer
 
         public DemoContext(string nameOrConnectionString) : base(nameOrConnectionString)
         {
-            Database.SetInitializer<DemoContext>(new DropCreateDatabaseAlways<DemoContext>());
+            Database.SetInitializer<DemoContext>(new DropCreateDatabaseIfModelChanges<DemoContext>());
         }
 
         public virtual DbSet<Post> Posts { get; set; }

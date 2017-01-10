@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using BusinessLogic.Implementation;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
 using MvcAdmin.Infrastructure;
@@ -19,6 +20,7 @@ namespace MvcAdmin
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             BootstrapContainer();
+            AutoMapperConfig.Initialize();
         }
 
 

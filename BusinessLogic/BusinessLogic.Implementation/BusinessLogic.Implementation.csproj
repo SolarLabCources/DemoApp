@@ -53,7 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoMapperConfig.cs" />
     <Compile Include="PostManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -65,6 +64,10 @@
     <ProjectReference Include="..\..\DataAccessLayer\DataAccessLayer\DataAccessLayer.csproj">
       <Project>{C41D65E7-2AE4-4CDF-913C-0623E925B89A}</Project>
       <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Extensions\Extensions.csproj">
+      <Project>{516B8CBB-D6F6-4D9C-A3A8-CE5972012BBF}</Project>
+      <Name>Extensions</Name>
     </ProjectReference>
     <ProjectReference Include="..\BusinessLogic.Abstraction\BusinessLogic.Abstraction.csproj">
       <Project>{C96503BF-8658-4A63-BD67-A934498B68A8}</Project>

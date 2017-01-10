@@ -14,12 +14,6 @@ namespace MvcAdmin.Controllers
 
         public ActionResult Index()
         {
-            _postManager.AddPost(new AddPostDto
-            {
-                Title = "Новый пост",
-                Description = "Описание поста"
-            });
-
             return View();
         }
 
