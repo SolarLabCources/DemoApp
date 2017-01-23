@@ -54,7 +54,7 @@ namespace BusinessLogic.Implementation
         {
             IQueryable<Post> postQuery = _context.Posts;
             postQuery = ApplyFiltering(postQuery, filter);
-            var posts = postQuery.ToList();
+            var posts = postQuery.Take(10).ToList();
             return Mapper.Map<IEnumerable<PostDto>>(posts);
         }
 

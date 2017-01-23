@@ -9,7 +9,9 @@ namespace MvcAdmin
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.js",
+                        "~/Scripts/jquery-ui.js",
+                        "~/Scripts/slb.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/ajax").Include(
                         "~/Scripts/jquery.unobtrusive-ajax.js"));
@@ -28,7 +30,9 @@ namespace MvcAdmin
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/jquery-ui.css",
+                      "~/Content/jquery-ui.theme.css"
+                      ));
         }
     }
 }

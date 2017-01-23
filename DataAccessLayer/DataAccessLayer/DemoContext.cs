@@ -9,8 +9,10 @@ namespace DataAccessLayer
         {
             return new DemoContext();
         }
+
         public DemoContext() : this("DemoConnection")
         {
+
         }
 
         public DemoContext(string nameOrConnectionString) : base(nameOrConnectionString)

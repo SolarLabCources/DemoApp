@@ -21,11 +21,29 @@ namespace MvcAdmin.Controllers
             _postManager = postManager;
         }
 
-        [HttpGet]
-        public ActionResult Index()
+        public ActionResult AutoComplete(string term)
         {
-            var posts = _postManager.GetPosts();
+            var model = _postManager.GetPosts(new PostFilter
+            {
+                Title = term
+            }).Select(p => p.Title).ToArray();
+
+            return Json(model, JsonRequestBehavior.AllowGet);
+        }
+
+
+
+        [HttpGet]
+        public ActionResult Index(string searchTerm)
+        {
+            var posts = _postManager.GetPosts(new PostFilter { Title = searchTerm});
             var postVms = AutoMapper.Mapper.Map<IEnumerable<PostViewModel>>(posts);
+
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_PostsList", postVms);
+            }
+
             return View(postVms);
         }
 

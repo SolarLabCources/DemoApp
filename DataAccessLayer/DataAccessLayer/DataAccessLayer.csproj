@@ -50,6 +50,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DemoContext.cs" />
+    <Compile Include="Migrations\201701231306588_InitialCreate.cs" />
+    <Compile Include="Migrations\201701231306588_InitialCreate.Designer.cs">
+      <DependentUpon>201701231306588_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701231404467_InitialMigration.cs" />
+    <Compile Include="Migrations\201701231404467_InitialMigration.Designer.cs">
+      <DependentUpon>201701231404467_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +70,14 @@
       <Project>{CBE01C7B-60B4-4309-A427-623F594CAA26}</Project>
       <Name>DataAccessLayer.Objects</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201701231306588_InitialCreate.resx">
+      <DependentUpon>201701231306588_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701231404467_InitialMigration.resx">
+      <DependentUpon>201701231404467_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

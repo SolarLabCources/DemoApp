@@ -10,4 +10,26 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
+@*<form method="get">
+    <input type="search" name="searchTerm" />
+    <input type="submit" value="Search by Title" />
+</form>*@
+
+<form method="get" action="@Url.Action("Index")" data-slb-target="#postList" data-slb-ajax="true" date-my-attr>
+    <input type="search" data-slb-autocomplete="@Url.Action("AutoComplete")" name="searchTerm" />
+    <input type="submit" value="Search by Title" />
+</form>
+
+@*@using (Ajax.BeginForm(
+                            new AjaxOptions
+                            {
+                                HttpMethod = "get",
+                                InsertionMode = InsertionMode.Replace,
+                                UpdateTargetId = "postList"
+                            }))
+{
+    <input type="search" name="searchTerm" />
+    <input type="submit" value="Search by Title" />
+}*@
+
 @Html.Partial("_PostsList", Model)
